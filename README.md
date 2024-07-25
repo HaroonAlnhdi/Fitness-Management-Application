@@ -11,7 +11,7 @@
 A Fitness Management System (FMS) is an application solution  solution designed to manage all aspects of running a fitness club, gym, or wellness center. This includes member registration, trainer assignments, class scheduling, equipment management, payment processing, attendance tracking, and more. By integrating these various functions, the FMS enhances operational efficiency, improves member experience, and supports business growth.
 
 <p align="center">
-<img src="./pic/logo5.jpg" alt="drawing" width="200"/>
+<img src="./pic/logo5.jpg" alt="drawing" width="500"/>
 </p>
 
 <p align="center"><b>User Stories</b></p>
