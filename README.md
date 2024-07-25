@@ -1,7 +1,7 @@
 <h1 align="center">Fitness Application</h1>
 
 #### Date: 26/7/2024
-#### By: Haroon Ali Alnhdi
+#### By: Haroon Ali Alnahdi
 
 #### [GitHub](https://github.com/HaroonAlnhdi) | [LinkedIn](https://www.linkedin.com/in/haroon-alnhdi-849048309/) 
 ***
@@ -47,13 +47,13 @@ A Fitness Management System (FMS) is an application solution  solution designed 
 
 <h2 align="center">Screenshots</h2>
 
-<p align="center"><b>Project layout</b></p>
+<p align="center"><b>ERD</b></p>
 
 <p align="center">
-<img src="Images/p3.jpg" alt="drawing" width="800" height="400"/>
+<img src="pic/fitness.drawio.png" alt="drawing" width="800" height="400"/>
 </p>
 
-<p align="center">The results page, where users can see their final score, time taken, and a summary of correct/incorrect answers.</p>
+<p align="center">The ERD </p>
 
 
 ### ***Future Updates***
