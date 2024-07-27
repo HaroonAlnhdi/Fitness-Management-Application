@@ -55,6 +55,13 @@ A Fitness Management System (FMS) is an application solution  solution designed 
 
 <p align="center">The ERD  </p>
 
+<p align="center"><b>Landing Pages</b></p>
+
+<p align="center">
+<img src="pic/l.jpg" alt="drawing" width="800" height="400"/>
+</p>
+
+<p align="center">The landing page   </p>
 
 ### ***Future Updates***
 
