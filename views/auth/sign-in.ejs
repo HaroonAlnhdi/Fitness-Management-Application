@@ -3,16 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/sign-in-style.css">
   <title>Sign In</title>
 </head>
 <body>
-  <h1>Sign in</h1>
-  <form action="/auth/sign-in" method="POST">
+ 
+<div class="container">
+  <div class="sign-in-container">
+    <div class="left-side">
+      <div class="messg">
+  <h1>Welcome Back</h1>
+ <p>Enter your personal details to use all of sie features</p>
+  </div>
+    </div>
+    <div class="right-side">
+      <h1>Sign In</h1>
+
+      <div class="form-container">
+
+        <form action="/auth/sign-in" method="POST">
+          <label for="username">Username:</label>
+          <input type="text" name="username" id="username" required />
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" required />
+          <button type="submit">Sign in</button>
+          
+        </form> 
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+<!--   
+<form action="/auth/sign-in" method="POST">
     <label for="username">Username:</label>
     <input type="text" name="username" id="username" required />
     <label for="password">Password:</label>
     <input type="password" name="password" id="password" required />
     <button type="submit">Sign in</button>
-  </form>
-</body>
+  </form> 
+  -->
 </html>
+
+
+
+
+
+

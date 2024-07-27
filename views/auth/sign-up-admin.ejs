@@ -1,25 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/sign-up.css">
   <title>Sign Up</title>
 </head>
+
 <body>
-  <h1>Create a new Admin account!</h1>
-  <form action="/auth/sign-up" method="POST">
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required />
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required />
-    <label for="confirmPassword">Confirm Password:</label>
-    <input 
-      type="password"
-      name="confirmPassword"
-      id="confirmPassword"
-      required 
-    />
-    <button type="submit">Sign up</button>
-  </form>
+        <div class="container">
+         <div class="sign-up-container">
+          <div class="left-side">
+         <div class="messg">
+          <h1>Never give up..</h1>
+          <p>New Admin in the website cool...!</p>
+         </div>
+        </div>
+          <div class="right-side">
+          <h1>Create A New Admin Account!</h1>
+        <div class="form-container">
+          <form action="/auth/sign-up" method="POST">
+            <div class="row">
+              <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required />
+              </div>
+              <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" required />
+              </div>
+              <div class="input-group">
+                <label for="firstname">First Name:</label>
+                <input type="text" name="firstname" id="firstname" required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text" name="lastname" id="lastname" required />
+              </div>
+              <div class="input-group">
+                <label for="cpr">CPR:</label>
+                <input type="number" name="cpr" id="cpr" required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="input-group">
+                <label for="PhoneNumber">Phone Number:</label>
+                <input type="text" name="PhoneNumber" id="PhoneNumber" required />
+              </div>
+            </div>
+            <div class="row">
+              <button type="submit">Sign up</button>
+            </div>
+          </form>
+          </div>
+          </div>
+          </div>
+          </div>
 </body>
+
 </html>
