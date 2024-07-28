@@ -7,6 +7,7 @@
 body{
     height: 100vh;
     /* background-image: url(https://i.pinimg.com/564x/c5/54/15/c554156f95e19ad3b2b678b3801c2a48.jpg); */
+    font-family: 'Montserrat', sans-serif;
 }
 .container{
     width: 100vw;
@@ -21,7 +22,7 @@ body{
 
 .container h1{
     font-size: 50px;
-    color: #fff;
+    color: #DEC911;
     font-weight: 600;
 }
 
@@ -62,6 +63,7 @@ z-index: -1;
     height: 100%;
     object-fit: cover;
     transform: translate(-50%, -50%);
+
   }
   
   .container {
@@ -70,4 +72,9 @@ z-index: -1;
     color: white;
     text-align: center;
     padding: 20px;
+  }
+
+  .container a:hover{
+    background-color: #DEC911;
+    color: #fff;
   }
