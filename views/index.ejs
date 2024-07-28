@@ -3,23 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/Home.css">
   <title>Home Page</title>
 </head>
 <body>
+
+  <div class="video-container">
+    <video autoplay loop muted playsinline class="backVideo">
+      <source src="https://i.imgur.com/B2g0j0O.mp4" type="video/mp4">
+    </video>
+  </div>
+  
   <% if (user) { %>
-    <h1>Welcome to the app, <%= user.username %>!</h1>
-    <p>
-      <a href="/auth/sign-out">Sign out</a>
-    </p>
+    <div class="container">
+      <h1>Welcome to the app, <%= user.username %>!</h1>
+      <p>
+        <a href="/auth/sign-out">Sign out</a>
+      </p>
+    </div>
   <% } else { %>
     <%- include('./partials/_navbar.ejs') %>
-    <h1>Welcome to the app, guest.</h1>
-    <p>
-      <a href="/auth/sign-up/admin"> Admin Sign up</a> or
-      <a href="/auth/sign-up/user"> User Sign up</a>or
-      <a href="/auth/sign-in">Sign in</a>.
-    </p>
+    <div class="container">
+      <h1>Welcome to the app, guest.</h1>
+      <p>
+        <a href="/auth/sign-in">Let's Start</a>.
+      </p>
+    </div>
   <% } %>
- 
+
 </body>
 </html>
