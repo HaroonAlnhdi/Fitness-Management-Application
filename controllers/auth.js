@@ -29,8 +29,8 @@ router.get('/sign-out', (req, res) => {
 // Handle user sign-up
 router.post('/sign-up/user', async (req, res) => {
   try {
-    const { username, password, confirmPassword } = req.body;
-    
+    const { username, password, confirmPassword, first_name,last_name, cpr, email, PhoneNumber,address,picture } = req.body;
+
     // Check if the username is already taken
     const userInDatabase = await User.findOne({ username });
     if (userInDatabase) {
@@ -46,15 +46,19 @@ router.post('/sign-up/user', async (req, res) => {
     const hashedPassword = bcrypt.hashSync(password, 10);
     
     // Create a new user
-    await User.create({ username, password: hashedPassword });
-    
-      // Create session data
-      req.session.user = {
-        username: user.username,
-        _id: user._id,
-        isAdmin: isAdmin
-      };
+    const newUser = await User.create({
+      username,
+      password: hashedPassword,
+      first_name,
+      last_name,
+      cpr,
+      email,
+      phoneNumber: PhoneNumber,
+      address,
+      picture,
 
+    });
+  
     res.redirect('/auth/sign-in');
   } catch (error) {
     console.log(error);
@@ -93,12 +97,12 @@ router.post('/sign-up/admin', async (req, res) => {
         phoneNumber: PhoneNumber
       });
   
-      // Create session data
-      req.session.user = {
-        username: newAdmin.username,
-        _id: newAdmin._id,
-        isAdmin: true
-      };
+      // // Create session data
+      // req.session.user = {
+      //   username: newAdmin.username,
+      //   _id: newAdmin._id,
+      //   isAdmin: true
+      // };
 
 
     res.redirect('/auth/sign-in');
