@@ -48,6 +48,13 @@ router.post('/sign-up/user', async (req, res) => {
     // Create a new user
     await User.create({ username, password: hashedPassword });
     
+      // Create session data
+      req.session.user = {
+        username: user.username,
+        _id: user._id,
+        isAdmin: isAdmin
+      };
+
     res.redirect('/auth/sign-in');
   } catch (error) {
     console.log(error);
@@ -58,7 +65,8 @@ router.post('/sign-up/user', async (req, res) => {
 // Handle admin sign-up
 router.post('/sign-up/admin', async (req, res) => {
   try {
-    const { username, password, confirmPassword } = req.body;
+    const {
+      username, password, confirmPassword, first_name,last_name, cpr, email, PhoneNumber } = req.body;
     
     // Check if the username is already taken
     const adminInDatabase = await Admin.findOne({ username });
@@ -74,9 +82,25 @@ router.post('/sign-up/admin', async (req, res) => {
     // Hash the password before sending to the database
     const hashedPassword = bcrypt.hashSync(password, 10);
     
-    // Create a new admin
-    await Admin.create({ username, password: hashedPassword });
-    
+      // Create a new admin
+      const newAdmin = await Admin.create({
+        username,
+        password: hashedPassword,
+        first_name,
+        last_name,
+        cpr,
+        email,
+        phoneNumber: PhoneNumber
+      });
+  
+      // Create session data
+      req.session.user = {
+        username: newAdmin.username,
+        _id: newAdmin._id,
+        isAdmin: true
+      };
+
+
     res.redirect('/auth/sign-in');
   } catch (error) {
     console.log(error);
@@ -84,40 +108,5 @@ router.post('/sign-up/admin', async (req, res) => {
   }
 });
 
-// Handle user and admin sign-in
-router.post('/sign-in', async (req, res) => {
-  try {
-    const { username, password } = req.body;
-    
-    // Check both user and admin collections
-    const userInDatabase = await User.findOne({ username });
-    const adminInDatabase = await Admin.findOne({ username });
-    
-    const user = userInDatabase || adminInDatabase;
-    const isAdmin = !!adminInDatabase;
-    
-    if (!user) {
-      return res.send('Login failed. Please try again.');
-    }
-    
-    // Validate password
-    const validPassword = bcrypt.compareSync(password, user.password);
-    if (!validPassword) {
-      return res.send('Login failed. Please try again.');
-    }
-    
-    // Create session data
-    req.session.user = {
-      username: user.username,
-      _id: user._id,
-      isAdmin: isAdmin
-    };
-    
-    res.redirect('/');
-  } catch (error) {
-    console.log(error);
-    res.redirect('/');
-  }
-});
 
 module.exports = router;

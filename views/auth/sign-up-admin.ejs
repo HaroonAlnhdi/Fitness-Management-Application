@@ -21,50 +21,71 @@
           <div class="right-side">
           <h1>Create A New Admin Account!</h1>
         <div class="form-container">
-          <form action="/auth/sign-up" method="POST">
+
+
+          <form action="/auth/sign-up/admin" method="POST">
             <div class="row">
+
+
               <div class="input-group">
                 <label for="username">Username:</label>
                 <input type="text" name="username" id="username" required />
               </div>
+
+
               <div class="input-group">
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password" required />
               </div>
             </div>
+
             <div class="rowww">
               <div class="input-group">
                 <label for="confirmPassword">Confirm Password:</label>
                 <input type="password" name="confirmPassword" id="confirmPassword" required />
               </div>
+
               <div class="input-group">
-                <label for="firstname">First Name:</label>
-                <input type="text" name="firstname" id="firstname" required />
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" id="first_name" required />
               </div>
             </div>
+
+
             <div class="rowww">
               <div class="input-group">
-                <label for="lastname">Last Name:</label>
-                <input type="text" name="lastname" id="lastname" required />
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" id="last_name" required />
               </div>
+
+
               <div class="input-group">
                 <label for="cpr">CPR:</label>
                 <input type="number" name="cpr" id="cpr" required />
               </div>
             </div>
+
+
             <div class="rowww">
+
               <div class="input-group">
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" required />
               </div>
+
+
               <div class="input-group">
                 <label for="PhoneNumber">Phone Number:</label>
                 <input type="text" name="PhoneNumber" id="PhoneNumber" required />
               </div>
+
             </div>
+
+
             <div class="rowww">
               <button type="submit">Sign up</button>
             </div>
+            
           </form>
           </div>
           </div>
