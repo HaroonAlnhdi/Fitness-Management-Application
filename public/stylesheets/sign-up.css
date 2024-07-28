@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,7 +63,7 @@ body {
   width: 80%;
 }
 
-.row {
+.rowww {
   display: flex;
   justify-content: space-between;
   margin: 5px 0;

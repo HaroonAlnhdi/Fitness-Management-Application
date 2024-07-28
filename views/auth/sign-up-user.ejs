@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <%- include('../partials/_navbar.ejs') %>
         <div class="container">
          <div class="sign-up-container">
           <div class="left-side">
@@ -22,7 +23,7 @@
         <div class="form-container">
           <form action="/auth/sign-up" method="POST">
 
-            <div class="row">
+            <div class="rowww">
               <div class="input-group">
                 <label for="username">Username:</label>
                 <input type="text" name="username" id="username" required />
@@ -34,7 +35,7 @@
               </div>
           
             </div>
-            <div class="row">
+            <div class="rowww">
               <div class="input-group">
                 <label for="confirmPassword">Confirm Password:</label>
                 <input type="password" name="confirmPassword" id="confirmPassword" required />
@@ -47,7 +48,7 @@
               </div>
             </div>
 
-            <div class="row">
+            <div class="rowww">
               <div class="input-group">
                 <label for="lastname">Last Name:</label>
                 <input type="text" name="lastname" id="lastname" required />
@@ -59,7 +60,7 @@
               </div>
             </div>
 
-            <div class="row">
+            <div class="rowww">
               <div class="input-group">
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" required />
@@ -71,7 +72,7 @@
               </div>
             </div>
             
-            <div class="row">
+            <div class="rowww">
               <div class="input-group">
                 <label for="address">Address:</label>
                 <input type="text" name="address" id="address" required />
@@ -82,7 +83,7 @@
                 <input type="file" name="picture" id="picture" required />
               </div>
             </div>
-            <div class="row">
+            <div class="rowww">
               <button type="submit">Sign up</button>
             </div>
           </form>

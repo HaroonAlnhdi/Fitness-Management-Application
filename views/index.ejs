@@ -12,6 +12,7 @@
       <a href="/auth/sign-out">Sign out</a>
     </p>
   <% } else { %>
+    <%- include('./partials/_navbar.ejs') %>
     <h1>Welcome to the app, guest.</h1>
     <p>
       <a href="/auth/sign-up/admin"> Admin Sign up</a> or

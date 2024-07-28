@@ -23,6 +23,7 @@ app.use(methodOverride('_method'));
 
 // for style :
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'pic')));
 
 app.use(
   session({
