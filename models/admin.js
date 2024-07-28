@@ -29,6 +29,12 @@ const AdminSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  role: {
+    type: String,
+    default: 'admin',
+    immutable: true,
+    require: false, 
+  },
  
 });
 
