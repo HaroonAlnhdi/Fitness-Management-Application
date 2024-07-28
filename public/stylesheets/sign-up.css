@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  height: 80vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +47,7 @@ body {
 }
 
 .right-side {
-  width: 50vw;
+  width: 65vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,11 +83,11 @@ body {
 .input-group input {
   background-color: #eee;
   border: none;
-  margin: 5px 0;
+  margin: 3px 0;
   padding: 10px 5px;
   font-size: 13px;
   border-radius: 8px;
-  width: 100%;
+  width: 95%;
   outline: none;
 }
 
