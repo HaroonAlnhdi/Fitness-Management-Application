@@ -136,6 +136,7 @@ router.post('/sign-in', async (req, res) => {
       return res.send('Login failed. Please try again.');
     }
 
+    const adminInDatabase = userInDatabase;
     // Set the session and redirect based on role
     req.session.user = {
       username: userInDatabase.username,
@@ -144,6 +145,8 @@ router.post('/sign-in', async (req, res) => {
     };
 
     if (userInDatabase.role === 'admin') {
+    
+      // res.redirect('/controlPanel/dashboard', { admin: adminInDatabase });  
       res.redirect('/controlPanel/dashboard'); // Redirect to admin dashboard
     } else {
       res.redirect('/'); // Redirect to user home page
