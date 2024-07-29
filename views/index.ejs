@@ -15,10 +15,13 @@
   </div>
   
   <% if (user) { %>
+    <%- include('./partials/_userNavbar.ejs') %>
     <div class="container">
+      
       <h1>Welcome to the app, <%= user.username %>!</h1>
       <p>
-        <a href="/auth/sign-out">Sign out</a>
+        <a href="#">Home</a>
+    
       </p>
     </div>
   <% } else { %>

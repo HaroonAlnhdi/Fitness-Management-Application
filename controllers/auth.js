@@ -117,35 +117,43 @@ router.post('/sign-up/admin', async (req, res) => {
 // post  the Sign in :
 router.post('/sign-in', async (req, res) => {
   try {
-    // First, get the user from the database
-    const userInDatabase = await User.findOne({ username: req.body.username });
+    const { username, password } = req.body;
+
+    // First, try to find the user in the User collection
+    let userInDatabase = await User.findOne({ username });
+
     if (!userInDatabase) {
-      return res.send('Login failed. Please try again.');
+      // If not found in User collection, try the Admin collection
+      userInDatabase = await Admin.findOne({ username });
+      if (!userInDatabase) {
+        return res.send('Login failed. Please try again.');
+      }
     }
-  
-    // There is a user! Time to test their password with bcrypt
-    const validPassword = bcrypt.compareSync(
-      req.body.password,
-      userInDatabase.password
-    );
+
+    // Check the password
+    const validPassword = bcrypt.compareSync(password, userInDatabase.password);
     if (!validPassword) {
       return res.send('Login failed. Please try again.');
     }
-  
-    // There is a user AND they had the correct password. Time to make a session!
-    // Avoid storing the password, even in hashed format, in the session
-    // If there is other data you want to save to `req.session.user`, do so here!
+
+    // Set the session and redirect based on role
     req.session.user = {
       username: userInDatabase.username,
-      _id: userInDatabase._id
+      _id: userInDatabase._id,
+      role: userInDatabase.role
     };
-  
-    res.redirect('/');
+
+    if (userInDatabase.role === 'admin') {
+      res.redirect('/controlPanel/dashboard'); // Redirect to admin dashboard
+    } else {
+      res.redirect('/'); // Redirect to user home page
+    }
   } catch (error) {
     console.log(error);
     res.redirect('/');
   }
 });
+
 
 
 module.exports = router;
