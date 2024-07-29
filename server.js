@@ -11,6 +11,10 @@ const authController = require('./controllers/auth.js');
 const panelController=require('./controllers/controlPanel.js');
 const home =require('./controllers/home.js');
 
+//middleware :
+const isSignedIn = require('./middleware/is-signed-in.js');
+const passUserToView = require('./middleware/pass-user-to-view.js');
+
 const port = process.env.PORT ? process.env.PORT : '3000';
 
 mongoose.connect(process.env.MONGODB_URI);
@@ -42,8 +46,9 @@ app.get('/', (req, res) => {
 });
 
 
-
+app.use(passUserToView);
 app.use('/auth', authController);
+app.use(isSignedIn);
 app.use('/controlPanel', panelController);
 
 app.listen(port, () => {
