@@ -18,7 +18,7 @@
     <%- include('./partials/_userNavbar.ejs') %>
     <div class="container">
       
-      <h1>Welcome to the app, <%= user.username %>!</h1>
+      <h1>Welcome to the app, <span class="userNameDisplay"><%= user.username %>! </span></h1>
       <p>
         <a href="#">Home</a>
     
@@ -36,4 +36,6 @@
 
   
 </body>
+
+
 </html>
