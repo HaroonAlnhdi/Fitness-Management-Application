@@ -1,17 +1,19 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 body{
 
     display: flex;
     background-color: aqua;
     width: 100vw;
+    background-color: #f4f4f4 !important;
     
 }
 
 .container{
  display: flex;
  flex-direction: column;
- background-color: #b62222;
+ font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -21,4 +23,37 @@ body{
     width: 100%;
     background-color: #212529;
     border-radius: 0 0 30px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titleDash{
+    text-align: center;
+    color: #DEC911;
+    font-weight: 700;
+}
+
+.massg{
+
+    /* background-color: aqua; */
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+.nameTag{
+
+    font-size: large;
+    color: #DEC911;
+    font-size: 28px;
+}
+
+.info{
+
+    color: #DEC911;
 }

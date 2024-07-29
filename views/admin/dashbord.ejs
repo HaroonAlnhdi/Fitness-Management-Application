@@ -12,11 +12,44 @@
 
     <%- include('../partials/_adminNavbar.ejs') %>
         <div class="container">
-            <div class="headers">Hreder
-
+            <div class="headers">
+                <h1 class="titleDash"> Dashboard</h1>
             </div>
-            
-            <p>welcome to admin page </p>
+            <div class="massg">
+            <p>welcome to admin page <span class="nameTag"><%= user.username %> </span></p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card">
+                <img src="https://i.pinimg.com/564x/96/66/3d/96663d92c076f5ec38e936391157d6d1.jpg"  alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Total Packages</h5>
+                  <p class="card-text">Active packages :<span class="info">4 packages</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="https://i.pinimg.com/564x/ea/91/41/ea9141a646249f60ded01538f8d10ee0.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Active Memberships</h5>
+                  <p class="card-text"><span class="info">Completed Memberships</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="https://i.pinimg.com/564x/e8/da/22/e8da221c769991f606f21cd5c2267f01.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Revenu</h5>
+                  <p class="card-text">Each Month at least <span class="info">$2356</span></p>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+
         </div>
 
       
