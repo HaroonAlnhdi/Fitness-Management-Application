@@ -1,0 +1,40 @@
+
+
+.CardsContainer{
+
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    width: 18rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+  }
+  
+  .card-body {
+    padding: 16px;
+  }
+  
+  .card-text {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .card-link {
+    text-decoration: none ;
+   border-top: 2px solid #333;
+    display: block;
+    margin-top: 12px;
+  }
+  
+  .card-link:hover {
+    text-decoration:solid;
+  }
+  

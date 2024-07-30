@@ -1,0 +1,13 @@
+<% if (admin.length > 0) { %>
+                <div class="test">
+                <ul>
+                    <% admin.forEach(admins => { %>
+                      <a href="/controllers/admins._id%>/show">
+                        <li>
+                            <h2><%= admins.username %></h2>
+                            <p><%= admins.email %></p>
+                        </li>
+                      </a>
+                    <% }) %>
+                </ul>
+            <% } %>

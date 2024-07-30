@@ -10,16 +10,18 @@ router.get('/dashboard', (req, res) => {
   res.render('admin/dashbord.ejs');
 });
 
-router.get('/members', (req, res) => {
-  res.render('admin/members.ejs');
+router.get('/members', async (req, res) => {
+  const members = await User.find();
+  res.render('admin/members.ejs',{members});
 });
 
 router.get('/trainers', (req, res) => {
   res.render('admin/trainers.ejs');
 });
 
-router.get('/admins', (req, res) => {
-  res.render('admin/admins.ejs');
+router.get('/admins', async (req, res) => {
+  const admin = await Admin.find();
+  res.render('admin/admins.ejs',{admin});
 });
 
 router.get('/packages', (req, res) => {
