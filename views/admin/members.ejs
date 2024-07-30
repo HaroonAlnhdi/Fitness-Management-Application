@@ -16,15 +16,61 @@
                 <h1 class="titleDash"> Members list </h1>
             </div>
 
-       
+            <div class="row row-cols-1 row-cols-md-3 g-4 cards">
+                <% if (members.length> 0) { %>
 
+                    <% members.forEach(member=> { %>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="/pic/persons/<%= member.picture%>" class="card-img-top  img-size"
+                                        alt="personal photo">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%= member.first_name %>
+                                            <%= member.last_name %>
+                                    </h5>
+                                    <p class="card-text">Membership : <span class="act">Active </span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <% }) %>
+                            <% } else { %>
+                                <p>You have not created any recipes yet.</p>
+                                <% } %>
+
+
+            </div>
         </div>
 
-      
+
 
 </body>
 
+<style>
+    .act {
+        color: green;
+    }
 
+    .card-img-container {
+        
+        width: 100%;
+        height: 35vh;
+        overflow: hidden;
+    }
+
+    .img-size {
+        width: 100%;
+        height: 50vh;
+
+        object-fit: cover;
+    }
+    .cards{
+        margin: 15px;
+    }
+</style>
 
 
 </html>
