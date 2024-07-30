@@ -19,7 +19,7 @@
        
            <div class="formcontainer">
                 <!-- Edit member Form -->
-                <form class="row g-3" action="/controlPanel/<%= member._id %>/edit?_method=PUT" method="POST">
+                <form class="row g-3" action="/controlPanel/<%= member._id %>/edituser?_method=PUT" method="POST">
                     <div class="col-md-4">
                       <label for="inputusername4" class="form-label">username</label>
                       <input type="text" name="username" class="form-control" id="inputusername4" value="<%= member.username %>">
@@ -41,17 +41,17 @@
                    
                     <div class="col-md-4">
                       <label for="phone Number" class="form-label">phone Number</label>
-                      <input type="text" class="form-control" id="phone Number" value="<%= member.phoneNumber %>">
+                      <input type="text" class="form-control" id="phone Number"name="phoneNumber" value="<%= member.phoneNumber %>">
                     </div>
 
                     <div class="col-md-6">
                       <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="email" value="<%= member.email %>">
+                      <input type="email" class="form-control"  name="email" id="email" value="<%= member.email %>">
                     </div>
 
                     <div class="col-md-6">
                       <label for="Address" class="form-label">Address</label>
-                      <input type="text" class="form-control" id="Address" value="<%= member.address %>">
+                      <input type="text" class="form-control"  name="address" id="Address" value="<%= member.address %>">
                     </div>
                     
                     <div class="col-12">

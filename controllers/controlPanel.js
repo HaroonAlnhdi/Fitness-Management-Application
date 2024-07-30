@@ -98,6 +98,19 @@ router.get('/:memberId/edituser', async (req, res) => {
   }
 });
 
+router.put('/:memberId/edituser', async (req, res) => {
+  try {
+    const memberId = req.params.memberId;
+    const updatedData = req.body;
+
+    // Find the admin by ID and update the details
+    await User.findByIdAndUpdate(memberId, updatedData);
+
+    res.redirect(`/controlPanel/members`); 
+  } catch (error) {
+    console.error(error);
+    res.send('Error updating member details');
+  }
+});
+
 module.exports = router;
-// /home/klash/code/ga/projects/Fitness-App/views/admin/admins.ejs
-// /home/klash/code/ga/projects/Fitness-App/views/admin/edits/editAdmin.ejs
