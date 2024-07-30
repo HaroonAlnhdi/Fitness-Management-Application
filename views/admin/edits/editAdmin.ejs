@@ -54,6 +54,13 @@
                     </div>
                   </form>
 
+
+                  <div class="delButn  ">
+                    <form action="/controlPanel/<%= admin._id %>/edit?_method=DELETE" method="POST">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+
                 </div>
             
         </div>
@@ -68,6 +75,11 @@
 
         margin: 35px;
         width: 65vw;
+    }
+
+    .delButn{
+
+      margin: 10px 0;
     }
 </style>
 

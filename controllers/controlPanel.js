@@ -52,10 +52,32 @@ router.put('/:adminId/edit', async (req, res) => {
     // Find the admin by ID and update the details
     await Admin.findByIdAndUpdate(adminId, updatedData);
 
-    res.redirect(`/controlPanel/admins`); // Redirect after successful update
+    res.redirect(`/controlPanel/admins`); 
   } catch (error) {
     console.error(error);
     res.send('Error updating admin details');
+  }
+});
+
+
+router.delete('/:adminId/edit', async (req, res) => {
+
+  try {
+
+
+    const result = await Admin.deleteOne({ _id: req.params.adminId });
+
+    // Check if any document was deleted
+    if (result.deletedCount === 0) {
+      console.log('Recipe not found or already deleted');
+      return res.redirect(`/controlPanel/admins`);
+    }
+    res.redirect(`/controlPanel/admins`);
+
+  } catch (error) {
+
+    console.log(error);
+    res.redirect('/')
   }
 });
 
