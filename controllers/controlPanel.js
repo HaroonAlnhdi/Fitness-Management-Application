@@ -113,4 +113,27 @@ router.put('/:memberId/edituser', async (req, res) => {
   }
 });
 
+// delete user 
+
+router.delete('/:memberId/edituser', async (req, res) => {
+
+  try {
+
+
+    const result = await User.deleteOne({ _id: req.params.memberId });
+
+    // Check if any document was deleted
+    if (result.deletedCount === 0) {
+      console.log('Recipe not found or already deleted');
+      return res.redirect(`/controlPanel/admins`);
+    }
+    res.redirect(`/controlPanel/members`);
+
+  } catch (error) {
+
+    console.log(error);
+    res.redirect('/')
+  }
+});
+
 module.exports = router;
