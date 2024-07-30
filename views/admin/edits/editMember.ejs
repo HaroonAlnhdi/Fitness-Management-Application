@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/dashbord.css">
+    <title>EditMember</title>
+</head>
+
+<body>
+
+    <%- include('../../partials/_adminNavbar.ejs') %>
+        <div class="container">
+            <div class="headers">
+                <h1 class="titleDash"> edit member  </h1>
+            </div>
+
+       
+           <div class="formcontainer">
+                <!-- Edit member Form -->
+                <form class="row g-3" action="/controlPanel/<%= member._id %>/edit?_method=PUT" method="POST">
+                    <div class="col-md-4">
+                      <label for="inputusername4" class="form-label">username</label>
+                      <input type="text" name="username" class="form-control" id="inputusername4" value="<%= member.username %>">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputCPR4" class="form-label">CPR</label>
+                      <input type="number"  name="cpr" class="form-control" id="inputCPR4" value="<%= member.cpr %>">
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="inputusername4" class="form-label">First Name</label>
+                        <input type="text" name="first_name" class="form-control" id="first_name" value="<%= member.first_name %>">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="last_name" class="form-label">Last name</label>
+                        <input type="text"  name="last_name" class="form-control" id="last_name" value="<%= member.last_name %>">
+                      </div>
+                  
+                   
+                    <div class="col-md-4">
+                      <label for="phone Number" class="form-label">phone Number</label>
+                      <input type="text" class="form-control" id="phone Number" value="<%= member.phoneNumber %>">
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" value="<%= member.email %>">
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="Address" class="form-label">Address</label>
+                      <input type="text" class="form-control" id="Address" value="<%= member.address %>">
+                    </div>
+                    
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                  </form>
+
+
+                  <div class="delButn  ">
+                    <form action="/controlPanel/<%= member._id %>/edit?_method=DELETE" method="POST">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+
+                </div>
+            
+        </div>
+
+      
+
+</body>
+
+<style>
+
+    .formcontainer{
+
+        margin: 35px;
+        width: 65vw;
+    }
+
+    .delButn{
+
+      margin: 10px 0;
+    }
+</style>
+
+
+</html>

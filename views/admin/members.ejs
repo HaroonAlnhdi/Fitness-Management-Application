@@ -32,13 +32,17 @@
                                             <%= member.last_name %>
                                     </h5>
                                     <p class="card-text">Membership : <span class="act">Active </span></p>
+                                    <div class="card-link">
+                                        <a href="/controlPanel/<%= member._id %>/edituser" class="link-warning"><i class="fas fa-edit"></i> Edit information</a>
+                                      </div>
                                 </div>
                             </div>
+
                         </div>
 
                         <% }) %>
                             <% } else { %>
-                                <p>You have not created any recipes yet.</p>
+                                <p>You have not created any member yet.</p>
                                 <% } %>
 
 
@@ -70,6 +74,17 @@
     .cards{
         margin: 15px;
     }
+
+    .card-link {
+    text-decoration: none ;
+   border-top: 2px solid #333;
+    display: block;
+    margin-top: 15px;
+  }
+  
+  .card-link:hover {
+    text-decoration:solid;
+  }
 </style>
 
 

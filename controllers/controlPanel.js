@@ -28,7 +28,7 @@ router.get('/packages', (req, res) => {
   res.render('admin/packages.ejs');
 });
 
-
+// Fpr Admin:-
 // Edit admins:
 router.get('/:adminId/edit', async (req, res) => {
   try {
@@ -78,6 +78,23 @@ router.delete('/:adminId/edit', async (req, res) => {
 
     console.log(error);
     res.redirect('/')
+  }
+});
+
+
+// For User :
+
+router.get('/:memberId/edituser', async (req, res) => {
+  try {
+    const memberId = req.params.memberId;
+    
+    // Fetch the admin details based on the adminId
+    const member = await User.findById(memberId);
+    
+    res.render('admin/edits/editMember.ejs', { member });
+  } catch (error) {
+    console.log(error);
+    res.redirect('/controlPanel/admins');
   }
 });
 
