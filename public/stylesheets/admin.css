@@ -37,4 +37,19 @@
   .card-link:hover {
     text-decoration:solid;
   }
+
+  .addnewadmin{
+
+    border: 2px solid black;
+    width: 13vw;
+    margin: 20px 0 0 25px;
+    background-color: #DEC911;
+    border-radius: 14px;
+    font-weight: 800;
+  }
+
+  .addnewadmin a {
+
+    color: black;
+  }
   

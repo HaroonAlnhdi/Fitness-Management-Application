@@ -105,7 +105,7 @@ router.post('/sign-up/admin', async (req, res) => {
       // };
 
 
-    res.redirect('/auth/sign-in');
+    res.redirect('/controlPanel/admins');
   } catch (error) {
     console.log(error);
     res.redirect('/');
