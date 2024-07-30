@@ -1,0 +1,30 @@
+.addnewpackage {
+    display: flex; 
+    align-items: center; 
+    margin: 20px 0; 
+    
+  }
+  
+  .addnewpackage .nav-link {
+    display: inline-flex; 
+    align-items: center;
+    padding: 10px 20px; 
+    border: 2px solid #212529 ; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    color: #DEC911; 
+    font-size: 16px; 
+    font-weight: bold; 
+    transition: background-color 0.3s, color 0.3s; 
+     background-color: #212529; 
+  }
+  
+  .addnewpackage .nav-link:hover {
+    background-color: #DEC911; 
+    color: #ffffff; 
+  }
+  
+  .addnewpackage .nav-link i {
+    margin-right: 8px; 
+  }
+  

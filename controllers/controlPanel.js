@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 
 const User = require('../models/user.js');
 const Admin = require('../models/admin.js');
+const Packages = require('../models/packages.js');
 
 // Render user sign-up page
 router.get('/dashboard', (req, res) => {
@@ -135,5 +136,14 @@ router.delete('/:memberId/edituser', async (req, res) => {
     res.redirect('/')
   }
 });
+
+
+
+//  For Packages:
+
+router.get('/packages/new', (req, res) => {
+  res.render('admin/new/newPackages.ejs');
+});
+
 
 module.exports = router;

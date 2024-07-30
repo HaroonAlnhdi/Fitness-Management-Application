@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/dashbord.css">
+    <link rel="stylesheet" href="/stylesheets/packages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>packages</title>
+</head>
+
+<body>
+
+    <%- include('../../partials/_adminNavbar.ejs') %>
+        <div class="container">
+            <div class="headers">
+                <h1 class="titleDash"> Add new Packages </h1>
+            </div>
+
+            
+            <div class="container mt-5">
+                <h2 class="mb-4">Fitness Package </h2>
+                <form action="/fitness-packages" method="POST">
+                    <div class="form-group">
+                        <label for="package_name">Package Name</label>
+                        <input type="text" class="form-control" id="package_name" name="package_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" class="form-control" id="price" name="price" required min="0" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="duration_weeks">Duration (weeks)</label>
+                        <input type="number" class="form-control" id="duration_weeks" name="duration_weeks" required min="1">
+                    </div>
+                    <button type="submit" class="btn btn-warning mt-4">Submit</button>
+                </form>
+            </div>
+       
+
+        </div>
+
+      
+
+</body>
+
+
+
+
+</html>
