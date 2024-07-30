@@ -5,26 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/dashbord.css">
-    <title>Members</title>
+    <title>EditAdmin</title>
 </head>
 
 <body>
 
-    <%- include('../partials/_adminNavbar.ejs') %>
+    <%- include('../../partials/_adminNavbar.ejs') %>
         <div class="container">
             <div class="headers">
-                <h1 class="titleDash"> Members list </h1>
+                <h1 class="titleDash"> edit admin  </h1>
             </div>
 
        
+           <div class="formcontainer">
+                <!-- Edit Admin Form -->
+                <form class="row g-3">
+                    <div class="col-md-3">
+                      <label for="inputusername4" class="form-label">username</label>
+                      <input type="text" name="username" class="form-control" id="inputusername4" value="<%= admin.username %>">
+                    </div>
+                    <div class="col-md-3">
+                      <label for="inputCPR4" class="form-label">CPR</label>
+                      <input type="number"  name="cpr" class="form-control" id="inputCPR4" value="<%= admin.cpr %>">
+                    </div>
 
+                    <div class="col-md-3">
+                        <label for="inputusername4" class="form-label">First Name</label>
+                        <input type="text" name="first_name" class="form-control" id="first_name" value="<%= admin.first_name %>">
+                      </div>
+                      <div class="col-md-3">
+                        <label for="last_name" class="form-label">Last name</label>
+                        <input type="text"  name="last_name" class="form-control" id="last_name" value="<%= admin.last_name %>">
+                      </div>
+                  
+
+                    <div class="col-md-6">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" value="<%= admin.email %>">
+                    </div>
+                   
+                    <div class="col-md-3">
+                      <label for="phone Number" class="form-label">phone Number</label>
+                      <input type="text" class="form-control" id="phone Number" value="<%= admin.phoneNumber %>">
+                    </div>
+                    
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                  </form>
+
+                </div>
+            
         </div>
 
       
 
 </body>
 
+<style>
 
+    .formcontainer{
+
+        margin: 35px;
+        width: 65vw;
+    }
+</style>
 
 
 </html>

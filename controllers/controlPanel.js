@@ -28,4 +28,22 @@ router.get('/packages', (req, res) => {
   res.render('admin/packages.ejs');
 });
 
+
+
+router.get('/:adminId/edit', async (req, res) => {
+  try {
+    const adminId = req.params.adminId;
+    
+    // Fetch the admin details based on the adminId
+    const admin = await Admin.findById(adminId);
+    
+    res.render('admin/edits/editAdmin.ejs', { admin });
+  } catch (error) {
+    console.log(error);
+    res.redirect('/admins'); // Redirect to the admin list page if an error occurs
+  }
+});
+
 module.exports = router;
+// /home/klash/code/ga/projects/Fitness-App/views/admin/admins.ejs
+// /home/klash/code/ga/projects/Fitness-App/views/admin/edits/editAdmin.ejs
