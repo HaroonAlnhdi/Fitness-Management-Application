@@ -29,7 +29,7 @@ router.get('/packages', (req, res) => {
 });
 
 
-
+// Edit admins:
 router.get('/:adminId/edit', async (req, res) => {
   try {
     const adminId = req.params.adminId;
@@ -59,7 +59,7 @@ router.put('/:adminId/edit', async (req, res) => {
   }
 });
 
-
+// Delete admin:
 router.delete('/:adminId/edit', async (req, res) => {
 
   try {
