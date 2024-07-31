@@ -205,5 +205,14 @@ body {
 
     font-size: 10px;
   }
+  .right-side button {
+
+    padding: 10px 5px ;
+  }
+
+  .right-side form {
+    padding: 0 0;
+  }
+
   
 }
