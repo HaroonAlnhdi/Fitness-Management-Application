@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user.js');
 const Admin = require('../models/admin.js');
 const Packages = require('../models/packages.js');
+const Trainer =require("../models/trainer.js")
 
 // Render user sign-up page
 router.get('/dashboard', (req, res) => {
@@ -16,8 +17,9 @@ router.get('/members', async (req, res) => {
   res.render('admin/members.ejs',{members});
 });
 
-router.get('/trainers', (req, res) => {
-  res.render('admin/trainers.ejs');
+router.get('/trainers', async (req, res) => {
+  const trainers = await Trainer.find();
+  res.render('admin/trainers.ejs',{trainers});
 });
 
 router.get('/admins', async (req, res) => {
@@ -211,6 +213,60 @@ router.delete('/:packageId/editPackeg', async (req, res) => {
     res.redirect('/')
   }
 });
+
+
+// for Trainer :
+
+
+// GET form to create new trainer
+router.get('/trainers/new', (req, res) => {
+  res.render('admin/new/newTrainer.ejs');
+});
+
+// POST new trainer
+router.post('/trainers/new', async (req, res) => {
+  try {
+    const trainer = new Trainer(req.body);
+    await trainer.save();
+    res.redirect('/controlPanel/trainers');
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+});
+
+// GET form to edit trainer
+router.get('/:trainerId/editTrainer', async (req, res) => {
+  try {
+    const trainer = await Trainer.findById(req.params.trainerId);
+    res.render('admin/edits/editTrainer.ejs', { trainer });
+  } catch (error) {
+    console.error(error);
+    res.redirect('/controlPanel/trainers');
+  }
+});
+
+// PUT update trainer
+router.put('/trainers/:id', async (req, res) => {
+  try {
+    await Trainer.findByIdAndUpdate(req.params.id, req.body);
+    res.redirect('/trainers');
+  } catch (error) {
+    console.error(error);
+    res.send('Error updating trainer details');
+  }
+});
+
+// DELETE trainer
+router.delete('/trainers/:id', async (req, res) => {
+  try {
+    await Trainer.findByIdAndDelete(req.params.id);
+    res.redirect('/trainers');
+  } catch (error) {
+    console.error(error);
+    res.send('Error deleting trainer');
+  }
+});
+
 
 
 module.exports = router;

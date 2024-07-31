@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/dashbord.css">
+    <title>Trainers</title>
+</head>
+
+<body>
+
+    <%- include('../../partials/_adminNavbar.ejs') %>
+        <div class="container">
+            <div class="headers">
+                <h1 class="titleDash"> Add new Trainer </h1>
+            </div>
+        
+            
+            <div class="container mt-5">
+                <form action="/controlPanel/trainers/new" method="POST">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="age">Age</label>
+                            <input type="number" class="form-control" id="age" name="age" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="specialization">Specialization</label>
+                            <input type="text" class="form-control" id="specialization" name="specialization" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="experience">Experience (years)</label>
+                            <input type="number" class="form-control" id="experience" name="experience" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="phone">Phone</label>
+                            <input type="text" class="form-control" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="salary">Salary</label>
+                            <input type="number" class="form-control" id="salary" name="salary" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="picture">picture (URL)</label>
+                            <input type="text" class="form-control" id="picture" name="Picture" >
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-warning mt-3">Add Trainer</button>
+                </form>
+            </div>
+            
+            
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>   
+</body>
+
+
+
+
+</html>
