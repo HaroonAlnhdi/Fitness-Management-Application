@@ -8,7 +8,7 @@
 
 <h2 align="center">Description</h2>
 
-A Fitness Management System (FMS) is an application solution  solution designed to manage all aspects of running a fitness club, gym, or wellness center. This includes member registration, trainer assignments, class scheduling, equipment management, payment processing, attendance tracking, and more. By integrating these various functions, the FMS enhances operational efficiency, improves member experience, and supports business growth.
+A fitness management system (FMS) is an application solution designed to manage all aspects of running a fitness club or gym. This includes member registration, trainer assignment, package scheduling, and more. Additionally, members can register for the app and view the available services.. By integrating these different functions, a fitness management system enhances operational efficiency, improves member experience, and supports business growth.
 
 <p align="center">
 <img src="image/logo5.jpg" alt="drawing" width="500"/>
@@ -16,15 +16,36 @@ A Fitness Management System (FMS) is an application solution  solution designed 
 
 <p align="center"><b>User Stories</b></p>
 
-1. The admin should have access to an admin panel to manage user accounts and content.
-2. The admin should be able to generate and view reports on user activity .
-3. the admin should be able to display all trainers .
-4. the admin should be able to create,edit,delete and show the users accounts .
-5. the admin should be able to view the schedules of all trainers, including their assigned classes and availability.
-6. the admin should be able to manage the class schedule by adding new classes, updating existing class details, and removing classes from the schedule.
-6. The user adds a new workout plan and schedules workouts.
-7. The user logs completed workouts and views progress history.
-8. The user receives personalized fitness tips and notifications.
+1. The admin should be able to access a comprehensive dashboard displaying key metrics and system status.
+
+2. The admin should be able to create trainers by entering details such as name, specialization, contact information, and uploading a profile picture.
+
+3. The admin should be able to edit trainer profiles with new information or corrections.
+
+3. The admin should be able to delete trainers from the system when necessary.
+
+4. The admin should be able to create members by registering personal details, contact information, and membership details.
+
+5. The admin should be able to edit member profiles with updated information or corrections.
+
+6. The admin should be able to delete members from the system when necessary.
+
+7.The admin should be able to view a list of all members with filtering and search functionalities.
+
+8. The admin should be able to create fitness packages by defining details such as name, duration, and pricing.
+
+9. The admin should be able to edit existing packages with new information or corrections.
+
+10. The admin should be able to delete packages from the system when necessary.
+
+11. The admin should be able to view a list of all packages with .
+
+12. The user should be able to browse and select new workout plans tailored to their fitness goals.
+
+13. The user should be able to schedule workouts based on the chosen workout plan, with options to view and adjust the schedule.
+14. The user should be able to create and manage their accounts with personal details, contact information, and preferences.
+
+15. The user should be able to view a comprehensive list of all trainers, including profiles and specializations.
 
 
 <p align="center"><b>Technologies Used</b></p>
@@ -37,11 +58,12 @@ A Fitness Management System (FMS) is an application solution  solution designed 
 * Express
 * Npm
 * MongoDB
+* bootstrap
 ***
 
 <h2 align="center">Getting Started</h2>
 
-##### The project itself was deployed and can be viewed [here](https://haroonalnhdi.github.io/Quiz-Game/).
+##### The project itself was deployed and can be viewed [here](https://fitness-managment-app-644035c9a7b8.herokuapp.com/).
 
 ***
 
@@ -65,13 +87,16 @@ A Fitness Management System (FMS) is an application solution  solution designed 
 
 ### ***Future Updates***
 
-- [ ] A
-- [ ] B
-- [x] C
-- [x] D
-- [x] ~~here~~.
+- [  ] Support for video content, interactive media, and automated publishing.
+- [  ] Add a page for viewing and managing exercise routines
+- [x] Provide options for users to connect with personal trainers for customized advice and support.
+- [x] Implement a system for users to provide feedback on workouts, trainers, and overall app experience.
+- [x] ~~Ensure interactive elements like buttons, forms, and media players are easily accessible and functional on all screen sizes.~~.
 ***
 ### ***Credits***
+
+##### excalidraw for design UI of  the app: [excalidraw ](https://excalidraw.com/)
+##### UUDI: [UUDI for session](https://www.uuidgenerator.net/)
 
 ##### Javascript Reference: [JS Search](https://www.thaicreate.com/javascript-manual/index.htm)
 
