@@ -158,4 +158,59 @@ router.post('/packages/new', async (req, res) => {
     res.status(500).send(error.message);
   }
 });
+
+
+// Get the package details for editing
+router.get('/:packageId/editPackeg', async (req, res) => {
+  try {
+    const packageId = req.params.packageId;
+    
+    // Fetch the package details based on the packageId
+    const fitnessPackage = await Packages.findById(packageId);
+    
+    res.render('admin/edits/editPackes.ejs', { fitnessPackage });
+  } catch (error) {
+    console.log(error);
+    res.redirect('/controlPanel/packages');
+  }
+});
+
+// Update the package details
+router.put('/:packageId/editPackeg', async (req, res) => {
+  try {
+    const packageId = req.params.packageId;
+    const updatedData = req.body;
+
+    // Find the package by ID and update the details
+    await Packages.findByIdAndUpdate(packageId, updatedData);
+
+    res.redirect('/controlPanel/packages'); 
+  } catch (error) {
+    console.error(error);
+    res.send('Error updating package details');
+  }
+});
+
+router.delete('/:packageId/editPackeg', async (req, res) => {
+
+  try {
+
+
+    const result = await Packages.deleteOne({ _id: req.params.packageId });
+
+    // Check if any document was deleted
+    if (result.deletedCount === 0) {
+      console.log('package not found or already deleted');
+      return res.redirect(`/controlPanel/packages`);
+    }
+    res.redirect(`/controlPanel/packages`);
+
+  } catch (error) {
+
+    console.log(error);
+    res.redirect('/')
+  }
+});
+
+
 module.exports = router;
