@@ -1,5 +1,5 @@
 
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
 *{
     margin: 0;
     box-sizing: border-box;
@@ -7,7 +7,7 @@
 body{
     height: 100vh;
     /* background-image: url(https://i.pinimg.com/564x/c5/54/15/c554156f95e19ad3b2b678b3801c2a48.jpg); */
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Oswald", sans-serif;
 }
 .container{
     width: 100vw;

@@ -50,6 +50,7 @@ app.use(passUserToView);
 app.use('/auth', authController);
 app.use(isSignedIn);
 app.use('/controlPanel', panelController);
+app.use('/home', home);
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);
