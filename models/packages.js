@@ -28,7 +28,14 @@ const fitnessPackageSchema = new Schema({
     updated_at: {
         type: Date,
         default: Date.now
-    }
+    },
+
+    pictureUrl : {
+        type: String,
+        required: false,
+        default: 'https://i.pinimg.com/564x/14/d0/af/14d0af92a7ce91440f475f418e146850.jpg',
+    },
+
 });
 
 // Middleware to update the updated_at field before each save

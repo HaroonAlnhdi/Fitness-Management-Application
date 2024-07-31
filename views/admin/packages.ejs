@@ -22,6 +22,39 @@
                 <a class="nav-link" href="/controlPanel/packages/new"><i class="fas fa-plus"></i> Add New Package </a>
               </div>
 
+
+              <div class="row row-cols-1 row-cols-md-3 g-4 cards">
+                <% if (package.length> 0) { %>
+
+                    <% package.forEach(packages => { %>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-img-container">
+                                    <img src="<%= packages.pictureUrl%>" class="card-img-top  img-size"
+                                        alt="package picture">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title"> <%= packages.package_name%> </h5>
+                                    <p class="card-text">Price : <span class="act"> <%= packages.price%> </span> $</p>
+                                    <p class="card-text">Description: <%= packages.description%> </p>
+                                    <p class="card-text">Duration weeks: <%= packages.duration_weeks%></p>
+                                    <p class="card-text">Created at: <%= packages.created_at%> </p>
+                                    <p class="card-text">updated_at: <%= packages.updated_at%></p>
+                                    <div class="card-link">
+                                        <a href="/controlPanel/<%= packages._id %>/edituser" class="link-warning"><i class="fas fa-edit"></i> Edit information</a>
+                                      </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <% }) %>
+                            <% } else { %>
+                                <p>You have not created any package yet.</p>
+                                <% } %>
+
+
+            </div>
        
 
         </div>

@@ -25,8 +25,9 @@ router.get('/admins', async (req, res) => {
   res.render('admin/admins.ejs',{admin});
 });
 
-router.get('/packages', (req, res) => {
-  res.render('admin/packages.ejs');
+router.get('/packages',async (req, res) => {
+  const package = await Packages.find();
+  res.render('admin/packages.ejs',{package});
 });
 
 // Fpr Admin:-
@@ -141,9 +142,20 @@ router.delete('/:memberId/edituser', async (req, res) => {
 
 //  For Packages:
 
-router.get('/packages/new', (req, res) => {
+router.get('/packages/new', async (req, res) => {
+
   res.render('admin/new/newPackages.ejs');
 });
 
 
+//  Create package:
+router.post('/packages/new', async (req, res) => {
+  try {
+    const fitnessPackage = new Packages(req.body);
+    await fitnessPackage.save();
+    res.redirect('/controlPanel/packages');
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+});
 module.exports = router;

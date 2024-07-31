@@ -21,7 +21,7 @@
             
             <div class="container mt-5">
                 <h2 class="mb-4">Fitness Package </h2>
-                <form action="/fitness-packages" method="POST">
+                <form action="/controlPanel/packages/new" method="POST">
                     <div class="form-group">
                         <label for="package_name">Package Name</label>
                         <input type="text" class="form-control" id="package_name" name="package_name" required>
@@ -37,6 +37,10 @@
                     <div class="form-group">
                         <label for="duration_weeks">Duration (weeks)</label>
                         <input type="number" class="form-control" id="duration_weeks" name="duration_weeks" required min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="duration_weeks">Picture of package (URL)</label>
+                        <input type="text" class="form-control" id="duration_weeks" name="pictureUrl" required min="1">
                     </div>
                     <button type="submit" class="btn btn-warning mt-4">Submit</button>
                 </form>
