@@ -246,7 +246,7 @@ router.get('/:trainerId/editTrainer', async (req, res) => {
 });
 
 // PUT update trainer
-router.put('/trainers/:id', async (req, res) => {
+router.put('/:trainerId/editTrainer', async (req, res) => {
   try {
     await Trainer.findByIdAndUpdate(req.params.id, req.body);
     res.redirect('/trainers');
@@ -257,7 +257,7 @@ router.put('/trainers/:id', async (req, res) => {
 });
 
 // DELETE trainer
-router.delete('/trainers/:id', async (req, res) => {
+router.delete('/:trainerId/editTrainer', async (req, res) => {
   try {
     await Trainer.findByIdAndDelete(req.params.id);
     res.redirect('/trainers');
