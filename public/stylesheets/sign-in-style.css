@@ -124,6 +124,7 @@ body {
 
   .left-side {
     border-radius: 10px 10px 0 0;
+    height: 40vh;
   }
 
   .right-side {
@@ -148,8 +149,10 @@ body {
   }
 
   .left-side {
-    background-size: cover;
+    object-fit: fit;
+    object-position: 100% 15%;
     border-radius: 10px 10px 0 0;
+    height: 40vh;
   }
 
   .right-side {
