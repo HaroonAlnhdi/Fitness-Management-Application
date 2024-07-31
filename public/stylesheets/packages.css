@@ -1,3 +1,13 @@
+
+
+body{
+
+  overflow-y: scroll;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+
 .addnewpackage {
     display: flex; 
     align-items: center; 
@@ -67,3 +77,4 @@ text-decoration:solid;
   height: 100% !important;
 }
   
+
