@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Oswald", sans-serif;
   background-color: #f4f4f4;
   color: #333;
   margin: 0;
@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .sign-up-container {
@@ -109,4 +109,59 @@ body {
 
 .right-side button:hover {
   background-color: #ac9e1f;
+}
+
+@media (max-width: 768px) {
+  .sign-up-container {
+    flex-direction: column;
+    height: auto;
+    width: 90vw;
+  }
+
+  .left-side {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 40vh;
+  }
+
+  .right-side {
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .sign-up-container {
+    width: 95vw;
+  }
+
+  .left-side {
+    height: 30vh;
+    margin-top: 70vh;
+  }
+  .left-side h1 {
+    font-weight: 600;
+  }
+
+
+  .right-side {
+    padding: 20px;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .rowww {
+    flex-direction: column;
+  }
+
+  .input-group {
+    width: 100%;
+  }
+
+  .input-group input {
+    width: 100%;
+  }
 }
