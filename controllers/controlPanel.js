@@ -128,8 +128,8 @@ router.delete('/:memberId/edituser', async (req, res) => {
 
     // Check if any document was deleted
     if (result.deletedCount === 0) {
-      console.log('Recipe not found or already deleted');
-      return res.redirect(`/controlPanel/admins`);
+      console.log('Member not found or already deleted');
+      return res.redirect(`/controlPanel/members`);
     }
     res.redirect(`/controlPanel/members`);
 
