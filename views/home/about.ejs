@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/memberStyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <title>About us</title>
+</head>
+
+<body>
+    <%- include('../partials/_userNavbar.ejs') %>
+        <div class="container">
+
+            <section class="section__container about__container" id="about">
+                <div class="about__header heade">
+                  <h2 class="  section__header ">ABOUT US</h2>
+                  <p class="section__description">
+                    Our mission is to inspire and support individuals in achieving their
+                    health and wellness goals, regardless of their fitness level or
+                    background.
+                  </p>
+                </div>
+                <div class="about__grid">
+                  <div class="about__card">
+                    <h4>WINNER COACHES</h4>
+                    <p>
+                      We pride ourselves on having a team of dedicated and experienced
+                      coaches who are committed to helping you succeed.
+                    </p>
+                  </div>
+                  <div class="about__card">
+                    <h4>AFFORDABLE PRICE</h4>
+                    <p>
+                      We believe that everyone should have access to high-quality fitness
+                      facilities without breaking the bank.
+                    </p>
+                  </div>
+                  <div class="about__card">
+                    <h4>MODERN EQUIPMENTS</h4>
+                    <p>
+                      Stay ahead of the curve with our state-of-the-art equipment designed
+                      to elevate your workout experience.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+
+
+
+        </div>
+        <%- include('../partials/footer.ejs') %>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
+</body>
+<style>
+    .heade h2 {
+        margin-top: 15px;
+        text-align: center;
+        font-family: "Oswald", sans-serif;
+        color: #DEC911;
+        font-size: 1.75rem;
+        font-weight: 900;
+    }
+</style>
+
+</html>

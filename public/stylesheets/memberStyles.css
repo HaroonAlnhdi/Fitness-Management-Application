@@ -85,3 +85,68 @@ body{
         padding: 10px;
     }
 }
+
+
+
+
+.about__header {
+    text-align: center;
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .about__header .section__header {
+    font-size: 3rem;
+  }
+  
+  .about__header .section__description {
+    max-width: 350px;
+    margin-inline: auto;
+  }
+  
+  .about__grid {
+    margin-top: 4rem;
+    display: grid;
+    gap: 4rem;
+  }
+  
+  .about__card h4 {
+    position: relative;
+    isolation: isolate;
+    margin-bottom: 1rem;
+    padding-top: 4rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: var(--header-font);
+    color: var(--text-dark);
+  }
+  
+  .about__card h4::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 6rem;
+    line-height: 6rem;
+    color: var(--text-dark);
+    opacity: 0.1;
+    z-index: -1;
+  }
+  
+  .about__card:nth-child(1) h4::before {
+    content: "01";
+ 
+  }
+  
+  .about__card:nth-child(2) h4::before {
+    content: "02";
+   
+  }
+  
+  .about__card:nth-child(3) h4::before {
+    content: "03";
+
+  }
+  
+  .about__card p {
+    color: var(--text-light);
+  }

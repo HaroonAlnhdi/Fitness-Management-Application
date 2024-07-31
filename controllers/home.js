@@ -15,6 +15,11 @@ router.get('/fitness', async (req, res) => {
     res.render('home/trainers.ejs',{Trainers});
   });
 
+  router.get('/about', async (req, res) => {
+    const Trainers = await Trainer.find();
+    res.render('home/about.ejs',{Trainers});
+  });
+
 
 
 module.exports = router;
