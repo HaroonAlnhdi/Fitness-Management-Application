@@ -8,7 +8,7 @@
 
 <h2 align="center">Description</h2>
 
-A fitness management Application (FMA) is an application solution designed to manage all aspects of running a fitness club or gym. This includes member registration, trainer assignment, package scheduling, and more. Additionally, members can register for the app and view the available services.. By integrating these different functions, a fitness management system enhances operational efficiency, improves member experience, and supports business growth.
+A Fitness Management Application (FMA) is an application solution designed to manage all aspects of running a fitness club or gym. This includes member registration, trainer assignment, package scheduling, and more. Additionally, members can register for the app and view the available services.. By integrating these different functions, a fitness management system enhances operational efficiency, improves member experience, and supports business growth.
 
 <p align="center">
 <img src="image/logo5.jpg" alt="drawing" width="500"/>
@@ -84,6 +84,52 @@ A fitness management Application (FMA) is an application solution designed to ma
 </p>
 
 <p align="center">The landing page   </p>
+
+<p align="center"><b>Users Pages</b></p>
+
+<p align="center">
+<img src="image/userHome.jpg" alt="drawing" width="800" height="400"/>
+</p>
+
+<p align="center">Home page  </p>
+
+<p align="center">
+<img src="image/memers.jpg" alt="drawing" width="800" height="400"/>
+</p>
+
+<p align="center">Membership page  </p>
+
+<p align="center">
+<img src="image/Trainers.jpg" alt="drawing" width="800" height="400"/>
+</p>
+
+<p align="center">Trainers page  </p>
+
+<p align="center">
+<img src="image/about.png" alt="drawing" width="800" height="400"/>
+</p>
+
+<p align="center">About us page  </p>
+
+<p align="center"><b>Admin Pages</b></p>
+
+<p align="center">
+<img src="image/dashbord.png" alt="drawing" width="800" height="400"/>
+</p>
+
+<p align="center">Dashbord  </p>
+
+<p align="center">
+<img src="image/members.png" alt="drawing" width="800" height="400"/>
+</p>
+
+<p align="center">member list  </p>
+
+<p align="center">
+<img src="image/packges.png" alt="drawing" width="800" height="400"/>
+</p>
+
+<p align="center"> Add packges than displed in user pages   </p>
 
 ### ***Future Updates***
 
