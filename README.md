@@ -8,7 +8,7 @@
 
 <h2 align="center">Description</h2>
 
-A fitness management system (FMS) is an application solution designed to manage all aspects of running a fitness club or gym. This includes member registration, trainer assignment, package scheduling, and more. Additionally, members can register for the app and view the available services.. By integrating these different functions, a fitness management system enhances operational efficiency, improves member experience, and supports business growth.
+A fitness management Application (FMA) is an application solution designed to manage all aspects of running a fitness club or gym. This includes member registration, trainer assignment, package scheduling, and more. Additionally, members can register for the app and view the available services.. By integrating these different functions, a fitness management system enhances operational efficiency, improves member experience, and supports business growth.
 
 <p align="center">
 <img src="image/logo5.jpg" alt="drawing" width="500"/>
